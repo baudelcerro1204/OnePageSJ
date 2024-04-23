@@ -1,0 +1,688 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* COLORES */
+.color-blanco,
+.encabezado,
+.menu a,
+.cta,
+.pie-de-pagina,
+.seccion.planeacion {
+  color: rgb(250, 250, 250);
+}
+
+.color-negro .indicador a {
+  color: rgb(35, 32, 33);
+}
+
+.color.grisoscuro,
+body,
+.quienes-somos blockquote cite {
+  color: rgb(67, 64, 65);
+}
+/* FONDOS */
+.encabezado,
+.seccion.planeacion {
+  background: rgba(35, 32, 33, 0.5);
+  min-height: 100vh;
+  padding: 3em 0;
+}
+
+.encabezado::before {
+  background: linear-gradient(rgba(42, 58, 63, 0.8), rgba(42, 58, 63, 0.8)),
+    url("https://www.conavalsi.com/_Uploads/Noticias/Cabecera/asesoramiento-juridico-pymes-autonomos.jpg");
+  background-size: cover;
+  background-position: 75%;
+}
+
+
+
+/*FONDO NEGRO CUBRECTOR*/
+.encabezado::before,
+.seccion.planeacion::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/*FONDO IMAGEN CENTRADA*/
+.encabezado *,
+.seccion.planeacion * {
+  position: relative;
+  z-index: 2;
+}
+
+/*=============================
+SVGS DE FONDO
+=============================*/
+.planeacion .svg.grafico {
+  background-image: url("https://solucionesgm.com/wp-content/uploads/2023/03/cobranza-judicial-extrajudicial-1.jpg");
+}
+
+/*=============================
+ESTILOS GENERALES
+=============================*/
+
+body {
+  text-align: center;
+}
+
+p {
+  padding: 0.5em 1em;
+}
+
+a {
+  font-weight: 600;
+  display: inline-block;
+}
+
+
+blockquote {
+  text-align: right;
+}
+
+blockquote footer {
+  display: block;
+  width: 100%;
+}
+
+cite {
+  font-style: normal;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fa {
+  font-size: 1.5em;
+  display: inline-block;
+  vertical-align: bottom;
+  padding-right: 0.5em;
+}
+
+.cta {
+  color: #f6f6f6;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.8em 1em;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  margin: 1em auto;
+  font-weight: 700;
+}
+
+.grupo.enlinea {
+  display: inline-block;
+  vertical-align: middle;
+  width: 70%;
+  width: calc(100% - 6.5rem);
+}
+
+.grupo .titulo {
+  position: relative;
+}
+
+/*=============================
+ENCABEZADO
+=============================*/
+
+.encabezado {
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  display: inline-block;
+  width: 6rem;
+  vertical-align: middle;
+}
+
+.menu {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.menu li {
+  display: block; 
+  margin-bottom: 1em; 
+}
+
+.menu a {
+  text-decoration: none;
+  display: block; 
+  font-weight: normal;
+  font-size: 1.2em;
+}
+
+.menu.navegacion {
+  width: 100%;
+  padding: 1em 5%;
+}
+
+.menu .menu {
+  width: 100%;
+}
+
+.menu.contacto {
+  padding-bottom: 2vmin;
+}
+
+.menu.contacto li {
+  padding: 0 3vmin;
+  text-align: center;
+}
+
+.menu.enlace a {
+  padding: 0 2vmin;
+}
+
+.banner {
+  padding: 5em 8em;
+  padding: 15vmin 10%;
+  text-align: left;
+}
+
+.banner .titulo {
+  font-size: 4em;
+  line-height: 1em;
+}
+
+.banner p {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80%;
+  max-width: 50em;
+  padding: 3em 1em;
+  padding: 3vmin;
+}
+
+.banner .cta {
+  display: block;
+  width: 13em;
+}
+
+.encabezado .grupo {
+  text-align: right;
+}
+
+.inicio .banner {
+  text-align: center;
+  padding: 5em 10%;
+  padding: 20vmin 10%;
+}
+
+.inicio .encabezado {
+  min-height: 98vh;
+}
+
+/* Media Query para dispositivos móviles */
+@media screen and (max-width: 600px) {
+  .banner {
+    padding: 5em 2vmin; /* Ajustar el relleno para dispositivos móviles */
+  }
+  
+  .banner .titulo {
+    font-size: 2.5em; /* Tamaño de fuente más pequeño para dispositivos móviles */
+  }
+
+  .banner p {
+    width: 100%; /* Ancho completo para dispositivos móviles */
+    padding: 2em 1vmin; /* Ajustar el relleno para dispositivos móviles */
+  }
+
+  .banner .cta {
+    width: 100%; /* Ancho completo para dispositivos móviles */
+    margin-top: 1em; /* Espaciado superior para dispositivos móviles */
+  }
+  
+  .menu li {
+    margin-bottom: 0.5em; /* Espaciado entre elementos del menú para dispositivos móviles */
+  }
+}
+
+
+/*=============================
+CONTENIDO
+=============================*/
+
+.enlaces .contenido {
+  padding: 1em 5%;
+}
+
+.seccion .grupo.introduccion {
+  text-align: justify;
+}
+
+.seccion {
+  padding: 3em 5% 5em;
+  padding: 3vmin 5% 5vmin;
+  display: inline-block;
+  max-width: 1600px;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .seccion {
+    padding: 2em 2vmin 4em; /* Ajustar el relleno para dispositivos móviles */
+  }
+}
+
+.introduccion .titulo {
+  font-weight: 600;
+  font-size: 2.6em;
+  line-height: 1em;
+  padding: 1em 0;
+  position: relative;
+  margin-bottom: 0.5em;
+}
+
+.introduccion p {
+  padding: 1em 0;
+  font-size: 1.4em;
+}
+
+
+.servicios .grupo.contenido {
+  font-size: 0;
+  letter-spacing: 0;
+}
+
+.servicios .grupo.contenido .servicio {
+  font-size: 1rem;
+  letter-spacing: normal;
+  width: 100%; /* Adjusted width for mobile devices */
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+
+.servicios .grupo.contenido .servicio {
+  font-size: 1rem;
+  letter-spacing: normal;
+  width: 30%;
+  width: calc(100% / 3);
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+
+.titulo.centrado {
+  text-align: center;
+}
+
+.titulo.centrado .decoracion {
+  left: calc(50% - 1.5em);
+  transform: translateX(-50%);
+}
+
+.grupo.especialidad {
+  width: calc(90% / 3.2);
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  padding: 2em 0 3em 4em;
+  padding: 5vmin 0 8vmin 4em;
+  margin: 0 2%;
+  transition: all ease 0.4s;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .enlaces .contenido {
+    padding: 1em 2vmin; /* Ajustar el relleno para dispositivos móviles */
+  }
+
+  .seccion {
+    padding: 2em 2vmin 4em; /* Ajustar el relleno para dispositivos móviles */
+  }
+
+  .introduccion .titulo {
+    font-size: 2em; /* Tamaño de fuente más pequeño para dispositivos móviles */
+    padding: 0.5em 0; /* Ajustar el relleno para dispositivos móviles */
+  }
+
+  .titulo .decoracion {
+    bottom: 5%; /* Ajustar posición para dispositivos móviles */
+  }
+
+  .introduccion p {
+    padding: 0.5em 0; /* Ajustar el relleno para dispositivos móviles */
+    font-size: 1.2em; /* Tamaño de fuente más pequeño para dispositivos móviles */
+  }
+
+  .servicios .grupo.contenido .servicio {
+    width: 100%; /* Ancho completo para dispositivos móviles */
+    margin-bottom: 2em; /* Espaciado inferior para dispositivos móviles */
+  }
+
+  .grupo.especialidad,
+  .grupo.servicio {
+    width: 100%; /* Ancho completo para dispositivos móviles */
+    padding: 2em 0; /* Ajustar el relleno para dispositivos móviles */
+    margin: 0; /* Eliminar margen para dispositivos móviles */
+  }
+
+  .contenido .grupo.contenido {
+    padding-top: 1em; /* Ajustar el relleno para dispositivos móviles */
+  }
+}
+
+/*- INICIO PLANEACION*/
+
+.seccion.planeacion {
+  max-width: 100%;
+  padding: 3em;
+  padding: 5%;
+  position: relative;
+}
+
+/* Media Query para dispositivos móviles */
+@media screen and (max-width: 600px) {
+  .seccion.planeacion {
+    padding: 2em; /* Ajustar el relleno para dispositivos móviles */
+  }
+
+  .planeacion .grupo {
+    width: 100%; /* Ancho completo para dispositivos móviles */
+    padding: 0 2%; /* Ajustar el relleno para dispositivos móviles */
+  }
+
+  .planeacion .grupo.imagen {
+    height: auto; /* Altura automática para dispositivos móviles */
+  }
+
+  .servicios .contenido {
+    padding: 0; /* Eliminar relleno para dispositivos móviles */
+  }
+
+  .servicios .grupo.contenido .servicio {
+    width: 100%; /* Ancho completo para dispositivos móviles */
+    margin-bottom: 2em; /* Espaciado inferior para dispositivos móviles */
+  }
+}
+
+.planeacion .grupo {
+  max-width: 1600px;
+  margin: auto;
+  padding: 0 5%;
+  width: 49%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.planeacion .grupo.introduccion {
+  text-align: left;
+}
+
+.planeacion .introduccion .titulo {
+  font-weight: 500;
+  margin-bottom: 0;
+  padding-bottom: 0.5em;
+}
+
+.planeacion .grupo p {
+  text-align: justify;
+  font-size: 1.2em;
+}
+
+.planeacion p i {
+  display: inline-block;
+  font-style: normal;
+  max-width: 17em;
+  text-align: left;
+}
+
+.planeacion p b {
+  display: inline-block;
+  padding: 0.25em 0;
+  font-weight: 600;
+}
+
+.planeacion .grupo.imagen {
+  height: 70vh;
+  padding: 0;
+}
+
+.planeacion .svg.grafico {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+.servicios .contenido {
+  padding: 0 2.5%;
+}
+
+.servicios .grupo.contenido .servicio {
+  font-size: 1rem;
+  letter-spacing: normal;
+  width: 30%;
+  width: calc(100% / 3);
+  display: inline-block;
+  vertical-align: top;
+  text-align: justify;
+}
+
+@gray-darker: #444444;
+@gray-dark: #696969;
+@gray: #999999;
+@gray-light: #cccccc;
+@gray-lighter: #ececec;
+@gray-lightest: lighten(@gray-lighter, 4%);
+
+
+.grupo.quienes-somos {
+  font-size: 1.5em;
+  position: absolute;
+  text-align: center;
+  width: 80%;
+  /* Ajusta el valor según tus necesidades o quita la propiedad para ocupar el ancho completo */
+  margin: 0 auto;
+  /* Centra el bloque */
+}
+
+.grupo.quienes-somos .titulo {
+  font-size: 2em;
+  /* Ajusta el tamaño del título según tus necesidades */
+  font-weight: 600;
+  text-align: center;
+  /* Centra el texto */
+}
+
+.quienes-somos .sub.grupo {
+  text-align: center;
+  /* Centra el texto */
+  padding: 1em 0;
+}
+
+.grupo.mision-vision {
+  font-size: 1.5em;
+  padding: 8vh 10% 8vh 10%;
+  position: relative;
+}
+
+.grupo.mision-vision .titulo {
+  font-size: 2em;
+  /* Ajusta el tamaño del título según tus necesidades */
+  font-weight: 600;
+  padding: 0.5em 0;
+  text-align: center;
+  /* Centra el texto */
+}
+
+.mision-vision .titulo .decoracion::before {
+  left: -2em;
+}
+
+
+.mision-vision .titulo .decoracion {
+  width: 1.5em;
+  box-shadow: 2.5em 0 rgb(151, 190, 19);
+  left: 9.8em;
+  /* Centra el elemento */
+  position: relative;
+}
+
+.quienes-somos .titulo .decoracion {
+  width: 1.5em;
+  box-shadow: 2.5em 0 rgb(151, 190, 19);
+  margin: left;
+  /* Centra el elemento */
+}
+
+
+.quienes-somos .titulo .decoracion::before {
+  left: 7em;
+}
+
+
+.quienes-somos .titulo .decoracion::before,
+.mision-vision .titulo .decoracion::before {
+  left: 1.8em;
+}
+
+
+.fundadores {
+  font-size: 0;
+  letter-spacing: 0;
+}
+
+.quienes-somos .fundadores {
+  padding: 1.5em 10%;
+  padding: 3vmin 10%;
+}
+
+.fundadores .grupo {
+  width: 30%;
+  width: calc(100% / 3);
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1rem;
+  text-align: justify;
+  padding: 2em;
+}
+
+.fundadores .fotografia {
+  display: block;
+  min-height: 25em;
+  height: 40vmin;
+}
+
+.fundadores :nth-child(even) .fotografia {
+  background-color: rgb(240, 240, 240);
+}
+
+.fundadores :nth-child(odd) .fotografia {
+  background-color: rgb(225, 225, 225);
+}
+
+.fundadores .titulo {
+  padding: 1em 0;
+  font-weight: 600;
+  font-size: 1.6em;
+}
+
+.fundadores p {
+  font-size: 1.2em;
+  padding: 1.2em 0;
+}
+
+.cards {
+    padding-left: 0; /* Establecer el padding-left a 0 */
+  }
+  
+  .cards__item {
+    padding-left: 20px; /* Ajustar el padding-left según sea necesario */
+  }
+/*==========================
+PIE DE PAGINA
+=============================*/
+
+.pie-de-pagina {
+    background: rgba(35, 32, 33, 0.5);
+    position: relative;
+    bottom: 0;
+    text-align: center; /* Centrar el contenido */
+  }
+  
+  .pie-de-pagina .menu {
+    color: black; /* Cambiar el color del texto a negro */
+    display: inline-block;
+    width: 90%;
+    text-align: left; /* Alinear el texto a la izquierda */
+  }
+  
+  .pie-de-pagina .menu li {
+    padding: 0.5vmin 3vmin;
+    max-width: 30em;
+  }
+  
+  .pie-de-pagina .copy {
+    padding: 1em;
+  }
+  
+
+@media (max-width: 960px) {
+  .menu {
+    font-size: 0.9em;
+  }
+
+  .indicador {
+    width: 50%;
+    font-size: 0.8rem;
+  }
+
+  .inicio .banner {
+    padding: 10vmin 1em;
+  }
+
+  .banner .titulo {
+    font-size: 2.5em;
+    font-size: 9vmin;
+  }
+}
+
+@media (max-width: 700px) {
+  .indicador {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .pie-de-pagina .grupo,
+  .encabezado .navegacion {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .banner {
+    padding: 18vmin 10%;
+  }
+
+  .seccion {
+    padding: 5vmin 5% 12vmin;
+  }
+
+  .seccion.planeacion {
+    padding: 12vmin 5%;
+    min-height: 95vh;
+  }
+}
