@@ -228,31 +228,6 @@ ENCABEZADO
   min-height: 98vh;
 }
 
-/* Media Query para dispositivos móviles */
-@media screen and (max-width: 600px) {
-  .banner {
-    padding: 5em 2vmin; /* Ajustar el relleno para dispositivos móviles */
-  }
-  
-  .banner .titulo {
-    font-size: 2.5em; /* Tamaño de fuente más pequeño para dispositivos móviles */
-  }
-
-  .banner p {
-    width: 100%; /* Ancho completo para dispositivos móviles */
-    padding: 2em 1vmin; /* Ajustar el relleno para dispositivos móviles */
-  }
-
-  .banner .cta {
-    width: 100%; /* Ancho completo para dispositivos móviles */
-    margin-top: 1em; /* Espaciado superior para dispositivos móviles */
-  }
-  
-  .menu li {
-    margin-bottom: 0.5em; /* Espaciado entre elementos del menú para dispositivos móviles */
-  }
-}
-
 
 /*=============================
 CONTENIDO
@@ -272,12 +247,6 @@ CONTENIDO
   display: inline-block;
   max-width: 1600px;
   width: 100%;
-}
-
-@media screen and (max-width: 600px) {
-  .seccion {
-    padding: 2em 2vmin 4em; /* Ajustar el relleno para dispositivos móviles */
-  }
 }
 
 .introduccion .titulo {
@@ -638,51 +607,70 @@ PIE DE PAGINA
   }
   
 
-@media (max-width: 960px) {
-  .menu {
-    font-size: 0.9em;
+  @media screen and (max-width: 600px) {
+    
+    .enlaces .contenido {
+      padding: 1em 2vmin; /* Ajustar el relleno para dispositivos móviles */
+    }
+  
+    .seccion {
+      padding: 2em 2vmin 4em; /* Ajustar el relleno para dispositivos móviles */
+    }
+  
+    .introduccion .titulo {
+      font-size: 2em; /* Tamaño de fuente más pequeño para dispositivos móviles */
+      padding: 0.5em 0; /* Ajustar el relleno para dispositivos móviles */
+      text-align: left;
+    }
+  
+    .introduccion .titulo.centrado {
+      font-size: 2em; /* Tamaño de fuente más pequeño para dispositivos móviles */
+      padding: 0.5em 0; /* Ajustar el relleno para dispositivos móviles */
+      text-align: center;
+    }
+  
+    .grupo.enlinea .titulo {
+      font-size: 2em; /* Tamaño de fuente más pequeño para dispositivos móviles */
+      padding: 0.5em 0; /* Ajustar el relleno para dispositivos móviles */
+      text-align: center;
+    }
+  
+    .grupo.enlinea .decoracion {
+      display: none;
+    }
+  
+    .titulo .decoracion {
+      bottom: 5%; /* Ajustar posición para dispositivos móviles */
+    }
+  
+    .seccion .grupo.introduccion {
+      text-align: justify;
+      width: 100%; /* Adjust the width to fill the entire space */
+    }
+  
+    .introduccion p {
+      width: 100%; /* Ocupar todo el ancho disponible */
+      padding: 0; /* Eliminar el relleno */
+      margin: 0; /* Asegurar que no haya márgenes */
+    }
+  
+    .servicios .grupo.contenido .servicio {
+      width: 100%; /* Ancho completo para dispositivos móviles */
+      margin-bottom: 2em; /* Espaciado inferior para dispositivos móviles */
+    }
+  
+    .grupo.especialidad {
+      width: 100%; /* Ancho completo para dispositivos móviles */
+      padding: 2em 0; /* Ajustar el relleno para dispositivos móviles */
+      margin: 0; /* Eliminar margen para dispositivos móviles */
+    }
+  
+    .contenido .grupo.contenido {
+      padding-top: 1em; /* Ajustar el relleno para dispositivos móviles */
+    }
+  
+    .planeacion .svg.grafico {
+      display: none; /* Oculta el elemento en dispositivos con ancho máximo de 767px */
+    }
   }
-
-  .indicador {
-    width: 50%;
-    font-size: 0.8rem;
-  }
-
-  .inicio .banner {
-    padding: 10vmin 1em;
-  }
-
-  .banner .titulo {
-    font-size: 2.5em;
-    font-size: 9vmin;
-  }
-}
-
-@media (max-width: 700px) {
-  .indicador {
-    width: 100%;
-    font-size: 0.8rem;
-  }
-}
-
-@media (min-width: 1200px) {
-
-  .pie-de-pagina .grupo,
-  .encabezado .navegacion {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-
-  .banner {
-    padding: 18vmin 10%;
-  }
-
-  .seccion {
-    padding: 5vmin 5% 12vmin;
-  }
-
-  .seccion.planeacion {
-    padding: 12vmin 5%;
-    min-height: 95vh;
-  }
-}
+  
